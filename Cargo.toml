@@ -1,0 +1,27 @@
+[package]
+name = "liquid-memory"
+version = "0.1.0"
+edition = "2021"
+description = "Liquid Memory is a Rust library for indexing and querying vector embeddings"
+license = "MIT"
+repository = "https://github.com/bernardo-sb/liquid-memory"
+
+[lib]
+name = "liquid_memory"
+path = "src/lib.rs"
+
+[dependencies]
+anyhow = "1.0.95"
+base64 = "0.22"
+qdrant-client = "1.12"
+reqwest = { version = "0.12", features = ["json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0.134"
+thiserror = "2.0"
+tokio = { version = "1.42", features = ["full", "rt-multi-thread"] }
+tonic = "0.12"
+uuid = { version = "1.4", features = ["v4"] }
+chrono = "0.4"
+
+[dev-dependencies]
+mockito = "1.0"
